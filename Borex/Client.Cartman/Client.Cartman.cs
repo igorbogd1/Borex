@@ -8,12 +8,12 @@ namespace Borex
         static void Main(string[] args)
         {
             var server = new BorexServer();
-            var rates = server.Rates;
-            for (int i = 0; i < rates.Count; i++)
-                Console.WriteLine("{0, 10}{1,8:0.00}{2,8:0.00}",
-                    rates[i].Currency,
-                    rates[i].Cost,
-                    rates[i].Growth);
+            foreach (var e in server.Rates)
+            Console.WriteLine("{0, 10}{1,8:0.00}{2,8:0.00}",
+                    e.Currency,
+                    e.Cost,
+                    e.Growth);
+
             Console.ReadKey();
         }
     }
