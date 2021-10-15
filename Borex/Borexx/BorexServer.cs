@@ -25,12 +25,6 @@ namespace Borexx
         }
         public void Exchange(Account account, Currencies from, Currencies to, double amount)
         {
-<<<<<<< HEAD
-            if (account[from] < amount)
-                throw new ArgumentException();
-=======
-            Console.WriteLine("{0,7:0.00} transferred from {1,-5} to {2,-5}", amount, from, to);
->>>>>>> 446a91ab66cbce45c5680c78a51ca9d0f8c0fa55
             account[from] -= amount;
             amount *= Rates.Where(z => z.Currency == from).FirstOrDefault().Cost;
             amount *= 0.95;
