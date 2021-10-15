@@ -1,5 +1,6 @@
 ﻿using Borexx;
 using System;
+using System.Collections.Generic;
 
 namespace Borex
 {
@@ -9,7 +10,7 @@ namespace Borex
         {
             var server = new BorexServer();
             foreach (var e in server.Rates)
-            Console.WriteLine("{0, 10}{1,8:0.00}{2,8:0.00}",
+            Console.WriteLine("{0,-6}{1,8:0.00}{2,8:0.00}",
                     e.Currency,
                     e.Cost,
                     e.Growth);
